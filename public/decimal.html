@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>STUDYBEE</title>
+    <style>
+        body {
+  background-color:#EDEADE;
+}
+        @keyframes moveLeft {
+            0% { left: 0; }
+            100% { left: 100%; }
+        }
+
+        #octalconverter1 {
+            position: absolute;
+            animation: moveLeft 10s linear infinite;
+        }
+
+        .container {
+            max-width: 400px;
+            margin: 0 auto;
+            padding: 20px;
+            background: #ecc19c;
+            border-radius: 5px;
+        }
+
+        h2 {
+            text-align: center;
+        }
+
+        .input-field {
+            margin-bottom: 10px;
+        }
+
+        .btn {
+            display: block;
+            width: 100%;
+            padding: 10px;
+            text-align: center;
+            background:#3b4d61;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        .result {
+            margin-top: 20px;
+            font-weight: bold;
+            text-align: center;
+        }
+          /* Updated styles for navigation bar (header) */
+    header {
+      background-color: #2f3941;
+      padding: 25px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    nav ul {
+      list-style: none;
+      margin: 0;
+      padding: 0;
+      display: flex;
+    }
+
+    nav li {
+      margin-right: 20px;
+    }
+
+    nav a {
+      color: #fff;
+      text-decoration: none;
+      font-weight: bold;
+      padding: 8px 12px;
+      border-radius: 5px;
+      transition: background-color 0.3s ease;
+    }
+
+    nav a:hover {
+      background-color: #ff5e14;
+    }
+
+    header h1 {
+      color: #fff;
+      margin: 0;
+    }
+
+    /* Updated styles for footer */
+    footer {
+      background-color: #333333;
+      color: #fff;
+      padding: 30px 0;
+      text-align: center;
+      bottom: 0;
+      width: 100%;
+    }
+
+    footer p {
+      font-size: 16px;
+      margin: 10px 0;
+    }
+
+    footer a {
+      color: #ff5e14;
+      text-decoration: none;
+      transition: color 0.3s ease;
+    }
+
+    footer a:hover {
+      color: #fff;
+    }
+    </style>
+</head>
+<body>
+    <header>
+        <nav>
+          <ul>
+            <li><a href="welcome.html">Home</a></li>
+            <li><a href="contact.html">Contact</a></li>
+            <li><a href="about.html">About</a></li>
+            <!-- Add more navigation links as needed -->
+          </ul>
+        </nav>
+        <h1>S T U D Y B E E </h1>
+      </header>
+
+    <h1 id="octalconverter1">DECIMAL CONVERTER</h1>
+    <br>
+    <br>
+    <br>
+
+
+    <div class="container">
+        <h2>Decimal to Binary Converter</h2>
+        <div class="input-field">
+            <label for="decimalBinary">Decimal Number:</label>
+            <input type="number" id="decimalBinary" placeholder="Enter decimal number" />
+        </div>
+        <button class="btn" onclick="convertDecimalToBinary()">Convert</button>
+        <div class="result">
+            <p id="binaryResult"></p>
+        </div>
+    </div>
+
+    <hr>
+
+    <div class="container">
+        <h2>Decimal to Octal Converter</h2>
+        <div class="input-field">
+            <label for="decimalOctal">Decimal Number:</label>
+            <input type="number" id="decimalOctalInput" placeholder="Enter decimal number" />
+        </div>
+        <button class="btn" onclick="convertDecimalToOctal()">Convert</button>
+        <div class="result">
+            <p id="octalResult"></p>
+        </div>
+    </div>
+
+    <hr>
+
+    <div class="container">
+        <h2>Decimal to Hexadecimal Converter</h2>
+        <div class="input-field">
+            <label for="decimalHexadecimal">Decimal Number:</label>
+            <input type="number" id="decimalHexadecimal" placeholder="Enter decimal number" />
+        </div>
+        <button class="btn" onclick="convertDecimalToHex()">Convert</button>
+        <div class="result">
+            <p id="hexResult"></p>
+        </div>
+    </div>
+
+    <script>
+        function convertDecimalToOctal() {
+            var decimal = document.getElementById('decimalOctalInput').value;
+            var octalResult = document.getElementById('octalResult');
+
+            if (decimal === '') {
+                octalResult.textContent = 'Please enter a decimal number.';
+                return;
+            }
+
+            var octal = decimalToBase(decimal, 8);
+            octalResult.textContent = 'Octal: ' + octal;
+        }
+
+        function convertBinaryToOctal() {
+            var binary = document.getElementById('binaryOctalInput').value;
+            var octalResult = document.getElementById('octalResult');
+
+            if (binary === '') {
+                octalResult.textContent = 'Please enter a binary number.';
+                return;
+            }
+
+            if (!isBinary(binary)) {
+                octalResult.textContent = 'Please enter a valid binary number (0 or 1 only).';
+                return;
+            }
+
+            var decimal = parseInt(binary, 2);
+            var octal = decimal.toString(8);
+            octalResult.textContent = 'Octal: ' + octal;
+        }
+
+        // Helper function to check if a string is a valid binary number
+        function isBinary(str) {
+            var pattern = /^[0-1]+$/;
+            return pattern.test(str);
+        }
+
+        // Helper function to convert a decimal number to any base
+        function decimalToBase(decimal, base) {
+            var result = '';
+
+            while (decimal > 0) {
+                var remainder = decimal % base;
+                result = remainder.toString() + result;
+                decimal = Math.floor(decimal / base);
+            }
+
+            return result;
+        }
+    </script>
+    <br>
+    <br>
+    <br>
+    <footer>
+        <div class="footer">
+          <p>&copy; 2023, All Rights Reserved. Our Company | Designed by <a href="#" target="_blank">UTKARSH</a></p>
+          <p>Follow us on social media: <a href="https://www.facebook.com/profile.php?id=100004121628822" target="_blank">Facebook</a> | <a href="https://twitter.com/utkarsh2523?t=d6_I2p66xgwvVKfhc9jzGA&s=09" target="_blank">Twitter</a> | <a href="https://instagram.com/utkarsh__singh_____?igshid=MzNlNGNkZWQ4Mg==" target="_blank">Instagram</a></p>
+        </div>
+      </footer>
+</body>
+</html>

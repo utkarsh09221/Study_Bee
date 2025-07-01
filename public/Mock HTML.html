@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mock Test Page</title>
+    <style>
+    
+    * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+}
+
+li {
+    list-style: none;
+}
+
+.container2 {
+    width: 1600px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.header {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    height: 100px;
+    box-shadow: 0px 35px 60px rgba(0, 0, 0, 0.25);
+    background-color: #E6E6FA;
+}
+
+.header__logo {
+    text-transform: uppercase;
+}
+
+/* Header navigation menu */
+.header__menu {
+    display: flex;
+    column-gap: 54px;
+}
+
+.header__link {
+    font-size: 20px;
+    text-transform: uppercase;
+    color: black;
+    text-decoration: none;
+    position: relative;
+}
+
+/* Rest of your CSS */
+
+
+      body {
+          font-family: Arial, sans-serif;
+          margin: 0;
+          padding: 0;
+          background-color: #f4f4f4;
+      }
+
+      .container {
+          max-width: 800px;
+          margin: 0 auto;
+          padding: 20px;
+          background-color: #ffffff;
+          box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+          border-radius: 5px;
+      }
+
+      h1 {
+          text-align: center;
+          margin-bottom: 20px;
+          color: #333333;
+      }
+
+      .question {
+          margin: 20px 0;
+      }
+
+      label {
+          display: block;
+          margin-bottom: 10px;
+      }
+
+      label input {
+          margin-right: 5px;
+      }
+
+      button {
+          display: block;
+          margin: 20px auto;
+          padding: 10px 20px;
+          background-color: #f9bc72;
+          color: #fff;
+          border: none;
+          border-radius: 5px;
+          cursor: pointer;
+          transition: background-color 0.3s;
+      }
+
+      button:hover {
+          background-color: #0056b3;
+      }
+
+      #results {
+          text-align: center;
+          margin-top: 20px;
+      }
+
+      #timer {
+          text-align: center;
+          font-size: 18px;
+          color: #777777;
+      }
+
+      #time {
+          color: #333333;
+      }
+      footer {
+        background-color: #333;
+        color: #fff;
+        text-align: center;
+        padding: 10px;
+      }
+
+      #dynamic-message {
+        font-size: 14px;
+      }
+  </style>
+</head>
+<body>
+    <header class="header">
+        <div class="container2">
+          <div class="header__logo">
+            <h1 class="header__logo__name">STUDYBEE</h1>
+          </div>
+          <nav class="header__nav">
+            <ul class="header__menu">
+<li class="header__item"><a href="index.html" class="header__link">Home</a></li>
+              <li class="header__item"><a href="about.html" class="header__link">About</a></li>
+              <li class="header__item"><a href="contact.html" class="header__link">Contact</a></li>
+            </ul>
+          </nav>
+        </div>
+    </header>
+
+      <br !important>
+      <br !important>
+      <br !important>
+      <br !important>
+    <div class="container">
+        <h1>Mock Test</h1>
+        <div id="timer">Time: <span id="time">120</span> seconds</div>
+        <form id="quizForm">
+          <div class="question">
+            <p>Ques 1 : Is it possible to link within the current page ?</p>
+            <label>
+                <input type="radio" name="q1" value="A"> A) Only in framesets
+            </label>
+            <label>
+                <input type="radio" name="q1" value="B"> B) Yes
+            </label>
+            <label>
+                <input type="radio" name="q1" value="C"> C) No
+            </label>
+            <label>
+                <input type="radio" name="q1" value="D"> D) null
+            </label>
+        </div>
+        <div class="question">
+            <p>Ques 2 : Which section is used for text and tags that are shown directly on your web page ?</p>
+            <label>
+                <input type="radio" name="q2" value="A"> A) Head
+            </label>
+            <label>
+                <input type="radio" name="q2" value="B"> B) Metatags
+            </label>
+            <label>
+                <input type="radio" name="q2" value="C"> C) Body
+            </label>
+        </div>
+        <div class="question">
+            <p>Ques 3 : Why should you add alternative text to your images ?</p>
+            <label>
+                <input type="radio" name="q3" value="A"> A) In case the user wishes to load a different picture
+            </label>
+            <label>
+                <input type="radio" name="q3" value="B"> B) So the users can get an idea of what the image is before it loads
+            </label>
+            <label>
+                <input type="radio" name="q3" value="C"> C) So the user can save the image using the text as a name
+            </label>
+        </div>
+        <div class="question">
+            <p>Ques 4 : What is used to store information usually relevant to browsers and search engines?</p>
+            <label>
+                <input type="radio" name="q4" value="A"> A) Cookies
+            </label>
+            <label>
+                <input type="radio" name="q4" value="B"> B) Metatags
+            </label>
+            <label>
+                <input type="radio" name="q4" value="C"> C) Tabs
+            </label>
+        </div>
+        <div class="question">
+            <p>Ques 5 : Why should you specify a background color if you are using an image for the actual background of your page ?</p>
+            <label>
+                <input type="radio" name="q5" value="A"> A) The background color will be shown until the image loads
+            </label>
+            <label>
+                <input type="radio" name="q5" value="B"> B) In case the image doesn't fit right
+            </label>
+            <label>
+                <input type="radio" name="q5" value="C"> C) So the text shows up better
+            </label>
+        </div>
+            <button type="submit">Submit Answers</button>
+        </form>
+        <div id="results"></div>
+    </div>
+    <script>
+        const quizForm = document.getElementById('quizForm');
+        const timer = document.getElementById('time');
+        const results = document.getElementById('results');
+
+        let timeRemaining = 120; // Reduced for testing purposes
+        let timerInterval;
+
+        function startTimer() {
+            timerInterval = setInterval(function() {
+                timeRemaining--;
+                timer.textContent = timeRemaining;
+
+                if (timeRemaining <= 0) {
+                    clearInterval(timerInterval);
+                    submitForm(); // Automatically submit the form when time is over
+                }
+            }, 1000);
+        }
+
+        function submitForm() {
+            clearInterval(timerInterval);
+            quizForm.submit();
+        }
+
+        startTimer();
+
+        quizForm.addEventListener('submit', function(event) {
+            event.preventDefault();
+
+            clearInterval(timerInterval);
+
+            const answers = {
+                q1: quizForm.q1.value,
+                q2: quizForm.q2.value,
+                q3: quizForm.q3.value,
+                q4: quizForm.q4.value,
+                q5: quizForm.q5.value
+            };
+
+            const correctAnswers = {
+                q1: 'B',
+                q2: 'C',
+                q3: 'B',
+                q4: 'A',
+                q5: 'A'
+            };
+
+            let score = 0;
+
+            for (const question in answers) {
+                if (answers[question] === correctAnswers[question]) {
+                    score++;
+                }
+            }
+
+            results.innerHTML = `<h2>Your Score: ${score} out of 5</h2>`;
+        });
+    </script>
+    <footer>
+        <p id="dynamic-message">
+          &copy; <span id="current-year"></span> My Special Website. All rights
+          reserved.
+        </p>
+      </footer>
+</body>
+</html>

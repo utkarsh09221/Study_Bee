@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>My Special Website</title>
+    <style>
+      body {
+        margin: 0;
+        padding: 0;
+        font-family: Arial, sans-serif;
+      }
+
+      header {
+        background-color: #333;
+        color: #fff;
+        padding: 10px;
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        z-index: 9999;
+      }
+
+      nav ul {
+        list-style: none;
+        margin: 0;
+        padding: 0;
+        display: flex;
+        justify-content: center;
+      }
+
+      nav ul li {
+        margin: 0 15px;
+      }
+
+      nav ul li a {
+        color: #fff;
+        text-decoration: none;
+        padding: 5px 10px;
+        transition: background-color 0.3s;
+      }
+
+      nav ul li a:hover {
+        background-color: #555;
+      }
+      .icons-container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-wrap: wrap;
+      }
+
+      .c-icon {
+        width: 200px;
+        height: 200px;
+        border: none;
+        border-radius: 50%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        cursor: pointer;
+        margin: 10px;
+        background-color: #f0f0f0;
+        transition: background-color 0.3s, color 0.3s;
+        text-decoration: none;
+        color: #000;
+      }
+
+      .c-icon:hover {
+        background-color: #007bff;
+        color: #fff;
+      }
+      .c-icon:focus {
+        outline: none;
+        box-shadow: 0 0 4px #007bff;
+      }
+      footer {
+        background-color: #333;
+        color: #fff;
+        text-align: center;
+        padding: 10px;
+      }
+
+      #dynamic-message {
+        font-size: 14px;
+      }
+    </style>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <link
+      href="https://getbootstrap.com/docs/5.3/assets/css/docs.css"
+      rel="stylesheet"
+    />
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"></script>
+  </head>
+  <body>
+    <header>
+      <nav>
+        <ul>
+<li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="#services">Services</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <br />
+    <br />
+    <br />
+    <br />
+
+    <!-- Example Code -->
+    <div class="card">
+      <div class="card-header">Featured</div>
+      <div class="card-body">
+        <h5 class="card-title">CHECK PRICE</h5>
+        <p class="card-text">
+          This will help you more to learn about basic
+        </p>
+        <a href="price.html" class="btn btn-primary">BUY</a>
+      </div>
+    </div>
+    <div class="icons-container">
+      <a href="#" class="c-icon">
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          width="60"
+          height="60"
+          viewBox="0 0 250 100"
+        >
+          <text x="30" y="60" font-size="60" font-weight="bold">HTML</text>
+        </svg>
+      </a>
+      <a href="#" class="c-icon">
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          width="60"
+          height="60"
+          viewBox="0 0 250 100"
+        >
+          <text x="30" y="60" font-size="60" font-weight="bold">CSS</text>
+        </svg>
+      </a>
+    </div>
+    <br />
+    <div class="icons-container">
+      <a href="#" class="c-icon">
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          width="60"
+          height="60"
+          viewBox="0 0 250 100"
+        >
+          <text x="-30" y="60" font-size="50" font-weight="bold">JAVASCRIPT</text>
+        </svg>
+      </a>
+      <a href="#" class="c-icon">
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          width="60"
+          height="60"
+          viewBox="0 0 250 100"
+        >
+          <text x="30" y="60" font-size="60" font-weight="bold">BOOTSTRAP</text>
+        </svg>
+      </a>
+    </div>
+<br>
+    <div class="icons-container">
+      <a href="#" class="c-icon">
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          width="60"
+          height="60"
+          viewBox="0 0 250 100"
+        >
+          <text x="30" y="60" font-size="60" font-weight="bold">JAVA</text>
+        </svg>
+      </a>
+      <a href="#" class="c-icon">
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          width="60"
+          height="60"
+          viewBox="0 0 250 100"
+        >
+          <text x="30" y="60" font-size="60" font-weight="bold">PYTHON</text>
+        </svg>
+      </a>
+    </div>
+    <br>
+    <div class="icons-container">
+      <a href="#" class="c-icon">
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          width="60"
+          height="60"
+          viewBox="0 0 250 100"
+        >
+          <text x="30" y="60" font-size="60" font-weight="bold">MY-SQL</text>
+        </svg>
+      </a>
+      <a href="#" class="c-icon">
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          width="60"
+          height="60"
+          viewBox="0 0 250 100"
+        >
+          <text x="30" y="60" font-size="60" font-weight="bold"> C</text>
+        </svg>
+      </a>
+    </div>
+    <br>
+    <div class="icons-container">
+      <a href="#" class="c-icon">
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          width="60"
+          height="60"
+          viewBox="0 0 250 100"
+        >
+          <text x="30" y="60" font-size="60" font-weight="bold">C++</text>
+        </svg>
+      </a>
+      <a href="#" class="c-icon">
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          width="60"
+          height="60"
+          viewBox="0 0 250 100"
+        >
+          <text x="30" y="60" font-size="60" font-weight="bold">VB.NET</text>
+        </svg>
+      </a>
+    </div>
+    <footer>
+      <p id="dynamic-message">
+        &copy; <span id="current-year"></span> My Special Website. All rights
+        reserved.
+      </p>
+    </footer>
+  </body>
+</html>

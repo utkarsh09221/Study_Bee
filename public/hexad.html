@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>STUDYBEE</title>
+    <style>
+        body {
+  background-color:#EDEADE;
+}
+        @keyframes move {
+            0% { left: 0; }
+            100% { left: 100%; }
+        }
+
+        #hexadecimalconverter {
+            position: absolute;
+            animation: move 10s linear infinite;
+        }
+
+        p {
+            margin-top: 20px;
+        }
+
+        .converter-container {
+            max-width: 400px;
+            margin: 0 auto;
+            padding: 20px;
+            background:#ecc19c;
+            border-radius: 5px;
+        }
+
+        h2 {
+            text-align: center;
+        }
+
+        .input-field {
+            margin-bottom: 10px;
+        }
+
+        .btn {
+            display: block;
+            width: 100%;
+            padding: 10px;
+            text-align: center;
+            background:#3b4d61;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        .result {
+            margin-top: 20px;
+            font-weight: bold;
+            text-align: center;
+        }
+
+          /* Updated styles for navigation bar (header) */
+    header {
+      background-color: #2f3941;
+      padding: 25px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    nav ul {
+      list-style: none;
+      margin: 0;
+      padding: 0;
+      display: flex;
+    }
+
+    nav li {
+      margin-right: 20px;
+    }
+
+    nav a {
+      color: #fff;
+      text-decoration: none;
+      font-weight: bold;
+      padding: 8px 12px;
+      border-radius: 5px;
+      transition: background-color 0.3s ease;
+    }
+
+    nav a:hover {
+      background-color: #ff5e14;
+    }
+
+    header h1 {
+      color: #fff;
+      margin: 0;
+    }
+
+    /* Updated styles for footer */
+    footer {
+      background-color: #333333;
+      color: #fff;
+      padding: 30px 0;
+      text-align: center;
+      bottom: 0;
+      width: 100%;
+    }
+
+    footer p {
+      font-size: 16px;
+      margin: 10px 0;
+    }
+
+    footer a {
+      color: #ff5e14;
+      text-decoration: none;
+      transition: color 0.3s ease;
+    }
+
+    footer a:hover {
+      color: #fff;
+    }
+    </style>
+</head>
+<body>
+    <header>
+        <nav>
+          <ul>
+<li><a href="index.html">Home</a></li>
+            <li><a href="contact.html">Contact</a></li>
+            <li><a href="about.html">About</a></li>
+            <!-- Add more navigation links as needed -->
+          </ul>
+        </nav>
+        <h1>S T U D Y B E E </h1>
+      </header>
+
+    <h1 id="hexadecimalconverter">HEXADECIMAL CONVERTER</h1>
+    <br>
+    <br>
+    <br>
+
+    <div class="converter-container">
+        <h2>Hexadecimal to Binary Converter</h2>
+        <div class="input-field">
+            <label for="hexToBinary">Hexadecimal Number:</label>
+            <input type="text" id="hexToBinary" placeholder="Enter hexadecimal number" />
+        </div>
+        <button class="btn" onclick="convertHexToBinary()">Convert</button>
+        <div class="result">
+            <p id="binaryResult"></p>
+        </div>
+    </div>
+
+    <hr>
+
+    <div class="converter-container">
+        <h2>Hexadecimal to Decimal Converter</h2>
+        <div class="input-field">
+            <label for="hexToDecimal">Hexadecimal Number:</label>
+            <input type="text" id="hexToDecimal" placeholder="Enter hexadecimal number" />
+        </div>
+        <button class="btn" onclick="convertHexToDecimal()">Convert</button>
+        <div class="result">
+            <p id="decimalResult"></p>
+        </div>
+    </div>
+
+    <hr>
+
+    <div class="converter-container">
+        <h2>Hexadecimal to Octal Converter</h2>
+        <div class="input-field">
+            <label for="hexToOctal">Enter a hexadecimal number:</label>
+            <input type="text" id="hexToOctal" placeholder="Hexadecimal number">
+        </div>
+        <button class="btn" onclick="convertHexToOct()">Convert</button>
+        <div class="result" id="octalResult"></div>
+    </div>
+
+    <script>
+        function convertHexToBinary() {
+            var hexadecimal = document.getElementById('hexToBinary').value;
+            var binaryResult = document.getElementById('binaryResult');
+
+            if (hexadecimal === '') {
+                binaryResult.textContent = 'Please enter a hexadecimal number.';
+                return;
+            }
+
+            var binary = parseInt(hexadecimal, 16).toString(2);
+            binaryResult.textContent = 'Binary: ' + binary;
+        }
+
+        function convertHexToDecimal() {
+            var hexadecimal = document.getElementById('hexToDecimal').value;
+            var decimalResult = document.getElementById('decimalResult');
+
+            if (hexadecimal === '') {
+                decimalResult.textContent = 'Please enter a hexadecimal number.';
+                return;
+            }
+
+            var decimal = parseInt(hexadecimal, 16);
+            decimalResult.textContent = 'Decimal: ' + decimal;
+        }
+
+        function isHexadecimal(hex) {
+            var hexRegex = /^[0-9A-Fa-f]+$/;
+            return hexRegex.test(hex);
+        }
+
+        function convertHexToOct() {
+            var hex = document.getElementById('hexToOctal').value;
+            var octalResult = document.getElementById('octalResult');
+
+            if (hex === '') {
+                octalResult.textContent = 'Please enter a hexadecimal number.';
+                return;
+            }
+
+            if (!isHexadecimal(hex)) {
+                octalResult.textContent = 'Please enter a valid hexadecimal number (0-9, A-F).';
+                return;
+            }
+
+            var decimal = parseInt(hex, 16);
+            var octal = decimal.toString(8);
+            octalResult.textContent = 'Octal: ' + octal;
+        }
+    </script>
+    <br>
+    <br>
+    <br>
+
+ <footer>
+    <div class="footer">
+      <p>&copy; 2023, All Rights Reserved. Our Company | Designed by <a href="#" target="_blank">UTKARSH</a></p>
+      <p>Follow us on social media: <a href="https://www.facebook.com/profile.php?id=100004121628822" target="_blank">Facebook</a> | <a href="https://twitter.com/utkarsh2523?t=d6_I2p66xgwvVKfhc9jzGA&s=09" target="_blank">Twitter</a> | <a href="https://instagram.com/utkarsh__singh_____?igshid=MzNlNGNkZWQ4Mg==" target="_blank">Instagram</a></p>
+    </div>
+  </footer>
+</body>
+</html>

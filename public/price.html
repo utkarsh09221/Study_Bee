@@ -1,0 +1,394 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>STUDYBEE</title>
+    <style>
+      header {
+        background-color: #333;
+        color: #fff;
+        padding: 10px;
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        z-index: 9999;
+      }
+
+      nav ul {
+        list-style: none;
+        margin: 0;
+        padding: 0;
+        display: flex;
+        justify-content: center;
+      }
+
+      nav ul li {
+        margin: 0 15px;
+      }
+
+      nav ul li a {
+        color: #fff;
+        text-decoration: none;
+        padding: 5px 10px;
+        transition: background-color 0.3s;
+      }
+
+      nav ul li a:hover {
+        background-color: #555;
+      }
+      /* CSS styling for the timeline goes here */
+      :root {
+        --primary-color: #fff;
+        --background-color: linear-gradient(54deg, #9164ff, #8bfff4);
+        --text-color: #3c3f64;
+      }
+
+      *,
+      *::before,
+      *::after {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      body {
+        font: normal 16px/1.5 'Titillium Web', sans-serif;
+        background: var(--background-color);
+        color: var(--text-color);
+        overflow-x: hidden;
+        padding-bottom: 50px;
+      }
+
+      .timeline ul li {
+        list-style-type: none;
+        position: relative;
+        width: 6px;
+        margin: 0 auto;
+        padding-top: 50px;
+        background: #fff;
+      }
+
+      .timeline ul li::after {
+        content: '';
+        position: absolute;
+        left: 50%;
+        bottom: 0;
+        transform: translateX(-50%) rotate(45deg);
+        width: 20px;
+        height: 20px;
+        z-index: 2;
+        background: #eee;
+      }
+
+      .timeline ul li div {
+        position: relative;
+        bottom: 0;
+        width: 400px;
+        padding: 20px;
+        background: var(--primary-color);
+        box-shadow: 4px 13px 30px 1px rgba(252, 56, 56, 0.2);
+        border-radius: 5px;
+        display: flex;
+        align-items: center;
+      }
+
+      .timeline ul li div time {
+        position: absolute;
+        background: #f5af19;
+        width: 80px;
+        height: 30px;
+        top: -15px;
+        border-radius: 5px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        letter-spacing: 2px;
+      }
+
+      .timeline ul li div div {
+        height: 100px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+      }
+
+      .timeline ul li div div p {
+        text-align: center;
+      }
+
+      .timeline ul li div .discovery {
+        margin-right: 10px;
+      }
+
+      .timeline ul li:nth-of-type(odd) > div {
+        left: 45px;
+      }
+
+      .timeline ul li:nth-of-type(even) > div {
+        left: -439px;
+      }
+
+      .timeline ul li div {
+        visibility: hidden;
+        opacity: 0;
+        transition: all 0.5s ease-in-out;
+      }
+
+      .timeline ul li:nth-of-type(odd) div {
+        transform: translate3d(100px, -10px, 0) rotate(10deg);
+      }
+
+      .timeline ul li:nth-of-type(even) div {
+        transform: translate3d(-100px, -10px, 0) rotate(10deg);
+      }
+
+      .timeline ul li.in-view div {
+        transform: none;
+        visibility: visible;
+        opacity: 1;
+      }
+
+      @media screen and (max-width: 900px) {
+        .timeline ul li div {
+          width: 250px;
+          flex-direction: column;
+        }
+
+        .timeline ul li div div {
+          width: 80%;
+          margin: 10px;
+        }
+
+        .timeline ul li:nth-of-type(even) > div {
+          left: -289px;
+        }
+      }
+
+      @media screen and (max-width: 600px) {
+        body {
+          background: #8bfff4;
+        }
+
+        .timeline ul li {
+          margin-left: 20px;
+        }
+
+        .timeline ul li div {
+          width: calc(100vw - 91px);
+        }
+
+        .timeline ul li:nth-of-type(even) > div {
+          left: 45px;
+        }
+      }
+    </style>
+  </head>
+
+  <body>
+    <header>
+      <nav>
+        <ul>
+<li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="#services">Services</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </nav>
+    </header>
+    <br />
+    <br />
+    <section class="timeline">
+      <ul>
+        <li>
+          <div>
+            <time>2,999</time>
+            <div class="discovery">
+              <h1>C</h1>
+              <p>(3 Months)</p>
+            </div>
+            <div class="scientist">
+              <h4>BUY</h4>
+              <span>---</span>
+            </div>
+          </div>
+        </li>
+        <li>
+          <div>
+            <time>2,999</time>
+            <div class="discovery">
+              <h1>C++</h1>
+              <p>(3 Months)</p>
+            </div>
+            <div class="scientist">
+              <h4>BUY</h4>
+              <span>--</span>
+            </div>
+          </div>
+        </li>
+        <li>
+          <div>
+            <time>1,799</time>
+            <div class="discovery">
+              <h1>HTML</h1>
+              <p>(1.5 Months)</p>
+            </div>
+            <div class="scientist">
+              <h4>BUY</h4>
+              <span>--</span>
+            </div>
+          </div>
+        </li>
+        <li>
+          <div>
+            <time>1,899</time>
+            <div class="discovery">
+              <h1>CSS</h1>
+              <p>(1.5 Months)</p>
+            </div>
+            <div class="scientist">
+              <h4>BUY</h4>
+              <span>--</span>
+            </div>
+          </div>
+        </li>
+        <li>
+          <div>
+            <time>2,999</time>
+            <div class="discovery">
+              <h1>Java Script</h1>
+              <p>2 Months</p>
+            </div>
+            <div class="scientist">
+              <h4>BUY</h4>
+              <span>--</span>
+            </div>
+          </div>
+        </li>
+        <li>
+          <div>
+            <time>2,999</time>
+            <div class="discovery">
+              <h1>Bootstrap</h1>
+              <p>(2 Months)</p>
+            </div>
+            <div class="scientist">
+              <h4>BUY</h4>
+              <span>--</span>
+            </div>
+          </div>
+        </li>
+        <li>
+          <div>
+            <time>6,999</time>
+            <div class="discovery">
+              <h1>Discovery</h1>
+              <p>(6 Months)</p>
+            </div>
+            <div class="scientist">
+              <h4>BUY</h4>
+              <span>--</span>
+            </div>
+          </div>
+        </li>
+        <li>
+          <div>
+            <time>9,999</time>
+            <div class="discovery">
+              <h1>Discovery</h1>
+              <p>(6 Months)</p>
+            </div>
+            <div class="scientist">
+              <h4>BUY</h4>
+              <span>--</span>
+            </div>
+          </div>
+        </li>
+        <li>
+          <div>
+            <time>1,999</time>
+            <div class="discovery">
+              <h1>SQL</h1>
+              <p>(3 Months)</p>
+            </div>
+            <div class="scientist">
+              <h4>BUY</h4>
+              <span>--</span>
+            </div>
+          </div>
+        </li>
+        <li>
+          <div>
+            <time>3,999</time>
+            <div class="discovery">
+              <h1>PHP</h1>
+              <p>(3 Months)</p>
+            </div>
+            <div class="scientist">
+              <h4>BUY</h4>
+              <span>--</span>
+            </div>
+          </div>
+        </li>
+        <li>
+          <div>
+            <time>15,999</time>
+            <div class="discovery">
+              <h1>Website building</h1>
+              <p>(12 Months)</p>
+            </div>
+            <div class="scientist">
+              <h4>BUY</h4>
+              <span>--</span>
+            </div>
+          </div>
+        </li>
+        <li>
+          <div>
+            <time>12,999</time>
+            <div class="discovery">
+              <h1>Server</h1>
+              <p>(10 months)</p>
+            </div>
+            <div class="scientist">
+              <h4>BUY</h4>
+              <span>--</span>
+            </div>
+          </div>
+        </li>
+      </ul>
+    </section>
+
+    <script>
+      // JavaScript code for the timeline functionality goes here
+      var items = document.querySelectorAll('.timeline li');
+
+      function isElementInViewport(el) {
+        var rect = el.getBoundingClientRect();
+        return (
+          rect.top >= 0 &&
+          rect.left >= 0 &&
+          rect.bottom <=
+            (window.innerHeight || document.documentElement.clientHeight) &&
+          rect.right <=
+            (window.innerWidth || document.documentElement.clientWidth)
+        );
+      }
+
+      function callbackFunc() {
+        for (var i = 0; i < items.length; i++) {
+          if (isElementInViewport(items[i])) {
+            if (!items[i].classList.contains('in-view')) {
+              items[i].classList.add('in-view');
+            }
+          } else if (items[i].classList.contains('in-view')) {
+            items[i].classList.remove('in-view');
+          }
+        }
+      }
+
+      window.addEventListener('load', callbackFunc);
+      window.addEventListener('scroll', callbackFunc);
+    </script>
+  </body>
+</html>

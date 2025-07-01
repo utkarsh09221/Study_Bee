@@ -1,0 +1,375 @@
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>STUDYBEE</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+    <style>
+      @import url('https://fonts.googleapis.com/css2?family=Sriracha&display=swap');
+
+      body {
+        background-color: white;
+      }
+
+      .header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        background-color: #e6e6fa;
+        padding: 20px;
+      }
+
+      .header .logo {
+        font-size: 50px;
+        font-family: 'Franklin Gothic Medium', cursive;
+        color: #000000;
+        text-decoration: blink;
+        margin-left: 30px;
+      }
+
+      .searchBox {
+  position: relative;
+  background: #2f3640;
+  height: 40px;
+  border-radius: 40px;
+  padding: 10px;
+}
+
+.searchBox:hover > .searchInput {
+  width: 240px;
+  padding: 0 6px;
+}
+
+.searchBox:hover > .searchButton {
+  background: white;
+  color: #2f3640;
+}
+
+.searchButton {
+  color: white;
+  float: right;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background: #2f3640;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: 0.4s;
+}
+
+.searchInput {
+  border: none;
+  background: none;
+  outline: none;
+  float: left;
+  padding: 0;
+  color: white;
+  font-size: 16px;
+  transition: 0.4s;
+  line-height: 40px;
+  width: 0px;
+}
+
+@media screen and (max-width: 620px) {
+  .searchBox:hover > .searchInput {
+      width: 150px;
+      padding: 0 6px;
+  }
+}
+
+      .inline-link {
+        color: black;
+        font-size: 13px;
+        text-decoration: none;
+        margin-left: 10px;
+      }
+
+      .inline-link i {
+        margin-right: 5px;
+      }
+
+  /* card */
+
+  .card {
+    max-width: 1400px;
+    margin: 20px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+
+  .card-body {
+    padding: 15px;
+  }
+
+  .card-title {
+    font-size: 20px;
+    font-weight: bold;
+    margin-bottom: 10px;
+  }
+
+  .card-text {
+    font-size: 16px;
+    color: #444;
+    margin-bottom: 15px;
+  }
+
+  .text-body-secondary {
+    font-size: 12px;
+    color: #999;
+  }
+
+      /* section */
+
+      .row {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-bottom: 10px;
+    }
+
+    .info {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    .info h2 {
+        font-size: 18px;
+        font-weight: bold;
+        margin-bottom: 5px;
+    }
+
+    .info p {
+        font-size: 16px;
+    }
+
+    /* Custom background colors for each row */
+    .row1 {
+        background-color: #f1c40f; /* Yellow */
+    }
+
+    .row2 {
+        background-color: #3498db; /* Blue */
+    }
+
+
+    .info i {
+        font-size: 24px;
+        margin-bottom: 5px;
+    }
+    /* CSS for CERYIFICATE */
+
+    .row3 {
+      font-size:50px;
+      text-align: center;
+    }
+    .card2 {
+  text-align: center;
+}
+
+
+      /* CSS for footer */
+      .footer {
+        display: flow;
+        justify-content: space-between;
+        align-items: center;
+        background-color: #212121;
+        padding: 10px 10px;
+      }
+
+      .footer .copy {
+        color: blue;
+      }
+
+      .bottom-links {
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        padding: 40px 10;
+      }
+
+      .bottom-links .links {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        padding: 10 40px;
+      }
+
+      .bottom-links .links span {
+        font-size: 30px;
+        color: lightgrey;
+        text-transform: uppercase;
+        margin: 10px 0;
+      }
+
+      .bottom-links .links a {
+        text-decoration: none;
+        color: #a1a1a1;
+        padding: 10px 20px;
+      }
+    </style>
+  </head>
+
+  <body>
+    <header class="header">
+      <a href="#" class="logo">𝐒 𝐓 𝐔 𝐃 𝐘 𝐁 𝐄 𝐄</a>
+      <div class="searchBox">
+        <input class="searchInput" type="text" name="" placeholder="Search">
+        <button class="searchButton" href="#">
+            <i class="material-icons">
+                search
+            </i>
+        </button>
+      </div>
+      <nav class="nav-items">
+        <a href="login.php" class="inline-link"
+          ><i class="fas fa-sign-out-alt"></i> Login</a
+        >
+        <a href="register.php" class="inline-link">Register</a>
+      </nav>
+    </header>
+
+    <div class="card mb-3">
+      <img src="https://www.studiosity.com/hs-fs/hubfs/Studiosity/Studiosity%20Images/Studiosity%20Blog%20Images/Referencing-books.jpeg?width=742&name=Referencing-books.jpeg" class="bd-placeholder-img card-img-top" width="100%" height="500" role="img" aria-label="Placeholder: Image cap" preserveAspectRatio="xMidYMid slice" focusable="false">
+      <div class="card-body">
+        <h1 class="card-title" style="font-size: 34px; text-align: center;">Explore a world of knowledge without restrictions.</h1>
+        <br>
+        <p class="card-text">
+          <strong>Why Choose Our HTML Course for Students?</strong>
+          <ol>
+            <li><strong>A Solid Foundation:</strong> Our course provides a rock-solid foundation in HTML, the fundamental language of the web. Understanding HTML is essential for aspiring web developers as it forms the backbone of every website.</li>
+            
+            <li><strong>Hands-On Learning:</strong> We believe in learning by doing! Throughout the course, students engage in a plethora of hands-on exercises and projects, honing their HTML skills in a practical and engaging manner.</li>
+            
+            <li><strong>Industry-Relevant Content:</strong> Our curriculum is meticulously curated to align with the latest industry standards and best practices. Students learn cutting-edge HTML techniques that are in high demand across various sectors.</li>
+            
+            <li><strong>Expert Guidance:</strong> Our team of experienced instructors is passionate about imparting knowledge and dedicated to guiding students through every step of their learning journey. We provide personalized attention to promptly address each student's doubts and queries.</li>
+            
+            <li><strong>Comprehensive Web Development Skills:</strong> Beyond learning HTML in isolation, students gain invaluable insights into integrating HTML with other essential web technologies like CSS and JavaScript. This comprehensive approach empowers them to create captivating and interactive web experiences.</li>
+            
+            <li><strong>Real-World Projects:</strong> We emphasize real-world applications by assigning projects that simulate actual web development scenarios. Students craft fully functional websites and web applications, bolstering their confidence and preparing them for real challenges in the field.</li>
+            
+            <li><strong>Abundant Career Opportunities:</strong> Web development is a rapidly expanding field with an ever-growing demand for skilled professionals. Completing our HTML course opens up a world of exciting career opportunities, from working as a web developer to pursuing entrepreneurship ventures.</li>
+            
+            <li><strong>Thriving Community Support:</strong> Joining our course means becoming part of a vibrant and supportive community of learners. Collaborate, share ideas, and network with like-minded individuals, fostering a supportive environment for personal and professional growth.</li>
+          </ol>
+        </p>
+      </div>
+    </div>
+    
+
+    <section class="main-body">
+      <div class="row row1">
+          <div class="info">
+              <h2>Duration:</h2>
+              <p>3 Months</p>
+          </div>
+          <div class="info">
+              <h2>Starts On:</h2>
+              <p>August 1, 2023</p>
+          </div>
+          <div class="info">
+            <h2>Live Classes Timing:</h2>
+            <p>Monday to Friday, 10:00 AM - 12:00 PM</p>
+          </div>
+          <div class="info">
+              <h2>Doubt Classes Timing:</h2>
+              <p>Tuesday and Thursday, 2:00 PM - 3:30 PM</p>
+          </div>
+      </div>
+<br>
+<br>
+      <!-- New row for Roles -->
+      <div class="row row2">
+          <div class="info">
+              <i class="fas fa-user-tie"></i>
+              <h2>Roles:</h2>
+              <p>Web Developer, Frontend Developer, Full Stack Developer</p>
+          </div>
+          <div class="info">
+              <i class="fas fa-graduation-cap"></i>
+              <h2>After Completion:</h2>
+              <p>Receive Certificate of Completion</p>
+          </div>
+          <div class="info">
+              <i class="fas fa-book"></i>
+              <h2>Learning:</h2>
+              <p>HTML, CSS, JavaScript, React, Node.js, MongoDB</p>
+          </div>
+          <div class="info">
+              <i class="fas fa-check-circle"></i>
+              <h2>Skills You'll Gain:</h2>
+              <p>Web Development, Frontend Development, Backend Development</p>
+          </div>
+          <div class="info">
+              <i class="fas fa-graduation-cap"></i>
+              <h2>Minimum Eligibility:</h2>
+              <p>No specific requirements. Anyone can join!</p>
+          </div>
+      </div>
+      
+      
+      <div class="card2">
+        <div class="card-body">
+          <h1 class="card-title" style="font-size: 44px;">Get Certificate</h1>
+        </div>
+        <img class="bd-placeholder-img card-img-bottom" src="https://res.cloudinary.com/practicaldev/image/fetch/s--7nV4szvF--/c_limit%2Cf_auto%2Cfl_progressive%2Cq_auto%2Cw_880/https://cdn-images-1.medium.com/max/4000/1%2A7ADj-If8IZUnFsHI7fCLeQ.png" alt="Certificate Image" width="70%" height="680">
+      </div>
+      
+  </section>
+
+    <footer class="footer">
+      <div class="bottom-links">
+        <div class="links">
+          <span>More Info</span>
+          <a href="courses.php">Home</a>
+          <a href="about.html">About</a>
+          <a href="contact.html">Contact</a>
+        </div>
+        <div class="links">
+          <span>Social Links</span>
+          <a href="https://www.facebook.com/profile.php?id=100004121628822"
+            ><i class="fab fa-facebook"></i
+          ></a>
+          <a
+            href="https://twitter.com/utkarsh2523?t=d6_I2p66xgwvVKfhc9jzGA&s=09"
+            ><i class="fab fa-twitter"></i
+          ></a>
+          <a
+            href="https://instagram.com/utkarsh__singh_____?igshid=MzNlNGNkZWQ4Mg=="
+            ><i class="fab fa-instagram"></i
+          ></a>
+        </div>
+      </div>
+
+      <br />
+      <div class="copyright-area">
+        <div class="copy">
+          <div class="row">
+            <div class="col-xl-12 col-lg-12 text-center text-lg-center">
+              <div class="copyright-text">
+                <p style="color: white">
+                  Copyright &copy; 2023, All Rights Reserved. Our Company
+                  <a
+                    href="https://codepen.io/anupkumar92/"
+                    style="color: orange"
+                    >Utkarsh</a
+                  >
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

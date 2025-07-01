@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Buy Course</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header class="bg-dark text-white text-center py-3">
+        <h1>Course Shop</h1>
+    </header>
+    <main class="d-flex justify-content-center align-items-center min-vh-100">
+        <section class="course-details bg-light p-4 rounded-lg">
+            <h2>Course Title</h2>
+            <p>Description of the course goes here.</p>
+            <p>Price: $99.99</p>
+            <form action="otp.html" method="post">
+                <div class="form-group">
+                    <label for="cardNumber">Card Number:</label>
+                    <input type="text" id="cardNumber" name="cardNumber" class="form-control" required>
+                </div>
+                <div class="form-group">
+                    <label for="cardName">Cardholder Name:</label>
+                    <input type="text" id="cardName" name="cardName" class="form-control" required>
+                </div>
+                <div class="form-row">
+                    <div class="col">
+                        <label for="expiryDate">Expiry Date:</label>
+                        <input type="text" id="expiryDate" name="expiryDate" class="form-control" placeholder="MM / YY" required>
+                    </div>
+                    <div class="col">
+                        <label for="cvv">CVV:</label>
+                        <input type="text" id="cvv" name="cvv" class="form-control" required>
+                    </div>
+                </div>
+                <button type="submit" class="btn btn-primary mt-3">Pay Now</button>
+            </form>
+        </section>
+    </main>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.1/dist/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>
