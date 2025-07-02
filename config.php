@@ -1,10 +1,10 @@
 <?php
-$servername = "mysql-utkarsh09221.alwaysdata.net";
-$username = "420678"; // replace with the final user you created
-$password = "Sudha2908@";        // replace with the password you set
-$dbname = "utkarsh09221_studybee"; // full DB name you created
+$host = 'mysql-utkarsh09221.alwaysdata.net';
+$username = 'utkarsh09221_420678';
+$password = 'Sudha2908@';
+$database = 'utkarsh09221_studybee';
 
-$conn = new mysqli($servername, $username, $password, $dbname);
+$conn = new mysqli($host, $username, $password, $database);
 
 // Check connection
 if ($conn->connect_error) {
