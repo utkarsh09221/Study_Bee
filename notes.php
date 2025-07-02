@@ -1,33 +1,36 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
-
-    <title>NOTES</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>StudyBee | Notes</title>
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
 </head>
-<body>
-    <div class="max-w-2xl mx-auto p-6 bg-white shadow-lg rounded-lg mt-10">
+<body class="bg-gradient-to-br from-blue-50 via-white to-blue-100 min-h-screen font-sans">
 
-    <h2 class="text-2xl font-bold mb-4 text-gray-800">📝 Take a Note</h2>
+  <div class="max-w-3xl mx-auto mt-16 p-8 bg-white shadow-2xl rounded-2xl border border-blue-200">
+    
+    <h1 class="text-3xl font-bold text-center text-blue-800 mb-6">📝 StudyBee Notes</h1>
 
-    <form method="POST" action="save_note.php" class="mb-6">
-        <textarea name="note_content"
-                  rows="5"
-                  class="w-full p-4 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
-                  placeholder="Write your note here..."
-                  required></textarea>
+    <!-- Note Taking Form -->
+    <form method="POST" action="save_note.php" class="mb-10">
+      <label for="note_content" class="block text-lg font-medium text-gray-700 mb-2">Write your note:</label>
+      <textarea id="note_content" name="note_content" rows="4"
+        class="w-full p-4 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-400 resize-none transition"
+        placeholder="Type something important..." required></textarea>
 
-        <button type="submit"
-                class="mt-4 px-6 py-2 bg-blue-600 text-white rounded-md hover:bg-blue-700 transition">
-            💾 Save Note
-        </button>
+      <button type="submit"
+        class="mt-4 w-full py-3 bg-blue-600 text-white font-semibold rounded-lg shadow hover:bg-blue-700 transition duration-300">
+        💾 Save Note
+      </button>
     </form>
 
-    <hr class="my-6 border-gray-300">
+    <!-- Display Notes -->
+    <div>
+      <h2 class="text-2xl font-semibold text-gray-800 mb-4">📋 Your Notes</h2>
+          </div>
+  </div>
 
-    <h3 class="text-xl font-semibold mb-4 text-gray-700">📋 Your Notes</h3>
 </body>
 </html>
 <?php
