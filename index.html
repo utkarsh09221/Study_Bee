@@ -1,0 +1,364 @@
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>STUDYBEE</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" >
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Sriracha&display=swap');
+
+    body {
+      margin: 0;
+      box-sizing: border-box;
+      background-color:#E0E0E0  !important ;
+    }
+
+    /* CSS for header */
+    .header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #E6E6FA;
+}
+
+.header .logo {
+    font-size: 40px;
+    font-family: 'Franklin Gothic Medium', cursive;
+    color: #000000;
+    text-decoration: blink;
+    margin-left: 30px;
+}
+
+.nav-items {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    background-color: #E6E6FA;
+    scroll-margin-block: 120px;
+}
+
+.nav-items a {
+    text-decoration: blink;
+    font-size: 20px;
+    color: #000000;
+    padding: 35px 35px;
+}
+
+.inline-link {
+    color: black;
+    font-size: 15px !important; 
+    text-decoration: underline !important;
+}
+
+.inline-link i {
+    margin-right: 5px;
+}
+
+.login-register-box {
+    border: 1px solid #000; 
+    display: inline-block; 
+  }
+  .login-register-box a {
+    display: block;
+    padding: 10px;
+    text-decoration: none;
+    color: #000; 
+  }
+
+ /* CSS for custom search form */
+ .custom-search {
+  position: relative;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  transition: all 1s;
+  width: 50px;
+  height: 50px;
+  background: white;
+  box-sizing: border-box;
+  border-radius: 25px;
+  border: 10px solid white !important;;
+  padding: 5px;
+}
+
+.custom-search input {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 42.5px;
+  line-height: 30px;
+  outline: 0;
+  border: 0;
+  display: none;
+  font-size: 1em;
+  border-radius: 20px;
+  padding: 0 20px;
+}
+
+.custom-search {
+position: absolute;
+top: 45%;
+left: 50%;
+transform: translate(-50%, -50%);
+transition: all 1s;
+width: 50px;
+height: 50px;
+background: white;
+box-sizing: border-box;
+border-radius: 25px;
+border: 4px solid white;
+padding: 5px;
+}
+
+.custom-search:hover {
+  width: 300px;
+  cursor: pointer;
+}
+
+.custom-search:hover input {
+  display: block;
+}
+
+.custom-search:hover .fas {
+  background: #07051a;
+  color: white;
+}
+
+
+  /* CSS for main element */
+  .intro {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 320px;
+    background: linear-gradient(to bottom, rgba(0, 0, 0, 0.5) 0%, rgba(0, 0, 0, 0.5) 100%), url("https://images.pexels.com/photos/234171/pexels-photo-234171.jpeg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    padding: 20px;
+  }
+
+  .intro h1 {
+    font-family:system-ui;
+    font-size: 33px;
+    color: #B2DFDB ;
+    font-weight: bold;
+    text-transform: uppercase;
+    text-align: center;
+    margin: 0;
+    padding: 0 120px;
+  }
+  hr.custom-line {
+    width: 50%; /* Adjust this value to control the width of the line */
+  }
+
+    /* CSS for footer */
+    .footer {
+      display: flow;
+      justify-content: space-between;
+      align-items: center;
+      background-color: #212121;
+      padding: 10px 10px;
+    }
+
+    .footer .copy {
+      color: blue;
+    }
+
+    .bottom-links {
+      display: flex;
+      justify-content: space-around;
+      align-items: center;
+      padding: 40px 10;
+    }
+
+    .bottom-links .links {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      padding: 10 40px;
+    }
+
+    .bottom-links .links span {
+      font-size: 30px;
+      color: lightgrey;
+      text-transform: uppercase;
+      margin: 10px 0;
+    }
+
+    .bottom-links .links a {
+      text-decoration: none;
+      color: #a1a1a1;
+      padding: 10px 20px;
+    }
+  </style>
+</head>
+
+<body>
+  <header class="header">
+    <a href="#" class="logo">𝐒 𝐓 𝐔 𝐃 𝐘 𝐁 𝐄 𝐄</a>
+    <nav class="nav-items">
+      <a href="#">HOME</a>
+      <a href="about.html">ABOUT</a>
+      <a href="contact.html">CONTACT</a>
+      <div class="login-register-box">
+        <a href="login.php" class="inline-link"><i class="fas fa-sign-out-alt" style="color:#f2824a"></i> Login</a>
+        <a href="register.php" class="inline-link"><i class="fas fa-sign-out-alt" style="color:#f2824a"></i>Register</a>
+      </div>
+    </nav>
+  </header>
+  <main>
+    <div class="intro">
+      <h1>"Embrace the challenges of coding, for they are the stepping stones to mastery"</h1>
+      
+      <!-- Updated position of the search form -->
+      <form action="" class="custom-search">
+        <input type="search" placeholder="Search here ...">
+        <i class="fas fa-search"></i>
+      </form>
+    </div>
+  </main>
+  <head>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://getbootstrap.com/docs/5.3/assets/css/docs.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+  </head>
+
+      
+    </div>
+    </div>
+
+    
+<br>
+<br>
+<br>
+
+<div class="row justify-content-center mb-4">
+<div class="col-sm-4">
+  <div class="card" style="width: 25rem;">
+    <img src="https://images.unsplash.com/photo-1488190211105-8b0e65b80b4e?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=870&q=80" class="card-img-top">
+    <div class="card-body">
+      <h3 class="card-title">Converter</h3>
+      <p class="card-text">"With our versatile converter, seamlessly navigate between binary, decimal, octal, and hexadecimal realms, unlocking a world of numerical possibilities."</p>
+      <div class="dropdown mt-3">
+        <a class="btn btn-secondary dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false" style="background-color: black;">
+          CONVERT
+        </a>
+        <ul class="dropdown-menu">
+          <li><a class="dropdown-item" href="binaryc.html">CALCULATOR</a></li>
+          <li><a class="dropdown-item" href="binary.html">BINARY</a></li>
+          <li><a class="dropdown-item" href="octal.html">OCTAL</a></li>
+          <li><a class="dropdown-item" href="decimal.html">DECIMAL</a></li>
+          <li><a class="dropdown-item" href="hexad.html">HEXADECIMAL</a></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="col-sm-4">
+<div class="card" style="width: 25rem;">
+    <img src="https://1.bp.blogspot.com/-d6ZEwHLByWc/XooXoz_ktvI/AAAAAAAACC8/IJ3H3C-NtbM5fRYfTuM6Qdx_c9vV5ZSwACNcBGAsYHQ/s1600/bca-bachelor-of-computer-applications-course-allbca.webp" class="card-img-top" style="height:16.5rem;">
+    <div class="card-body">
+      <h3 class="card-title">Course Detail</h3>
+      <p class="card-text">"Unlock your potential with our transformative course, designed to empower you with knowledge and skills. Enroll today and invest in your future at an affordable price that fits your budget."</p>
+      <a href="login.php" class="btn btn-primary" style="background-color: black;">COURSES</a>
+    </div>
+  </div>
+</div>
+
+<hr class="custom-line">
+
+<div class="row justify-content-center mb-4">
+<div class="col-sm-4">
+  <div class="card" style="width: 25rem;">
+    <img src="https://www.esaral.com/media/uploads/2019/10/Most-Important-Qs.jpg" class="card-img-top">
+    <div class="card-body">
+      <h2 class="card-title">Important Questions </h2>
+      <p class="card-text">"Empower yourself with the tools of success. Our courses are designed to equip you with the knowledge you need to thrive in a dynamic world."</p>
+      <br>
+      <a href="imp page.html" class="btn btn-primary" style="background-color: black;">QUESTIONS</a>
+    </div>
+  </div>
+</div>
+
+<div class="col-sm-4">
+<div class="card" style="width: 25rem;">
+    <img src="https://utkarsh.com/blog/wp-content/uploads/2021/02/website-13.05.19.01.jpg" class="card-img-top" style="height: 15rem;">
+    <div class="card-body">
+      <h3 class="card-title">MOCK TEST</h3>
+      <p class="card-text">"Unlock a treasure trove of knowledge and expertise. Enrich your mind, sharpen your skills, and redefine your potential with our transformative courses."</p>
+      <a href="MockTest.html" class="btn btn-primary" style="background-color: black;">LIST</a>
+    </div>
+  </div>
+</div>
+
+<hr class="custom-line">
+
+<div class="row justify-content-center mb-4">
+<div class="col-sm-4">
+  <div class="card" style="width: 25rem;">
+    <img src="https://blog.hubspot.com/hs-fs/hubfs/how-to-start-coding_13.webp?width=650&height=350&name=how-to-start-coding_13.webp" class="card-img-top">
+    <div class="card-body">
+      <h3 class="card-title">Theory</h3>
+      <p class="card-text">"Our courses are not just lessons; they're pathways to success. Experience the thrill of acquiring new skills and set sail towards a brighter tomorrow"</p>
+      <a href="learn.html" class="btn btn-primary" style="background-color: black;">SUBJECTS</a>
+    </div>
+  </div>
+</div>
+<div class="col-sm-4">
+<div class="card" style="width: 25rem;">
+  <img src="https://cdn.neowin.com/news/images/uploaded/2018/09/1537418720_keep_notes.jpg" class="card-img-top">
+  <div class="card-body">
+    <h3 class="card-title">Your Space</h3>
+    <p class="card-text">"Invest in yourself today and reap the rewards for a lifetime. Our courses offer a doorway to new horizons, where your dreams take flight"</p>
+    <a href="#" class="btn btn-primary" style="background-color: black;">UNDER PROCESS</a>
+  </div>
+</div>
+</div>
+</div>
+
+<br !important>
+<br !important>
+<br !important>
+
+      </div>
+    
+  </main>
+  <footer class="footer">
+    <div class="bottom-links">
+      <div class="links">
+        <span>More Info</span>
+        <a href="#">Features</a>
+        <a href="#">Blog</a>
+        <a href="#">About Us</a>
+      </div>
+      <div class="links">
+        <span>Social Links</span>
+        <a href="https://www.facebook.com/profile.php?id=100004121628822"><i class="fab fa-facebook"></i></a>
+        <a href="https://twitter.com/utkarsh2523?t=d6_I2p66xgwvVKfhc9jzGA&s=09"><i class="fab fa-twitter"></i></a>
+        <a href="https://instagram.com/utkarsh__singh_____?igshid=MzNlNGNkZWQ4Mg=="><i class="fab fa-instagram"></i></a>
+      </div>
+    </div>
+
+    <br>
+    <div class="copyright-area">
+      <div class="copy">
+          <div class="row">
+              <div class="col-xl-12 col-lg-12 text-center text-lg-center">
+                  <div class="copyright-text">
+                    <p style="color: white;">Copyright &copy; 2023, All Rights Reserved <a href="#" style="color: orange;">Utkarsh</a></p>
+                  </body>
+                  </div>
+              </div>
+          </div>
+      </div>
+  </footer>
+
+</body>
+</html>
